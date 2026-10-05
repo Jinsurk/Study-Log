@@ -216,3 +216,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# C/C++ generated files
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.dll
+*.elf
+tempCodeRunnerFile.c
+tempCodeRunnerFile.cpp
+General-Study/C-Language/**/bin/
