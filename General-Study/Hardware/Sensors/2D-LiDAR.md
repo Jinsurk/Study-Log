@@ -129,3 +129,7 @@ LaserScan은 +x 방향을 0으로, +z축 주위의 양의 회전을 각도의 �
 원본: [Notion — 2D LiDAR](https://app.notion.com/p/3ee9b0b79c1480fcb686ee96e4ad025c)
 
 GitHub 정리일: 2026-10-05. 이 문서는 Notion 노트의 수동 스냅샷이며 자동 동기화되지 않습니다.
+
+## 관련 실기 검증
+
+- [A3M1 C++ 실습 기록](RPLIDAR-A3M1/README.md) — 본문 원리 학습과 별도로 Windows·Jetson 실행 결과를 기록

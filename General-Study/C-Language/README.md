@@ -27,3 +27,7 @@ gcc -Wall -Wextra -Wpedantic -std=c17 01-Fundamentals/hello.c -o hello
 ```
 
 실행 파일은 커밋하지 않는다. 필요하면 `bin/` 디렉터리에 빌드한다. Windows의 실행 방식은 설치된 컴파일러와 터미널 환경에 따라 구분한다.
+
+## C++ 센서 실습
+
+- [RPLIDAR A3M1 데이터 취득](../Hardware/Sensors/RPLIDAR-A3M1/README.md) — C17 과정과 별도의 C++ 실습
