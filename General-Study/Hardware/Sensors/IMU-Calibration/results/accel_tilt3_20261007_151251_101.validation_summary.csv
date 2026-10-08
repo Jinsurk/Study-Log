@@ -1,0 +1,3 @@
+﻿stage,samples,mean_norm_g,std_norm_g,mean_abs_error_g,rmse_from_1g
+raw,1000,1.011112542,0.000522894,0.011112542,0.011124825
+corrected,1000,1.006206018,0.000517370,0.006206018,0.006227525

@@ -129,3 +129,7 @@ Nano 33 IoT에는 3축 가속도계와 3축 자이로가 통합된 IMU가 있으
 원본: [Notion — IMU — 가속도계와 자이로](https://app.notion.com/p/3ee9b0b79c14802dba59fd425ae4efbc)
 
 GitHub 정리일: 2026-10-05. 이 문서는 Notion 노트의 수동 스냅샷이며 자동 동기화되지 않습니다.
+
+## 실제 보정 실습
+
+[Nano 33 IoT IMU 보정 기록](IMU-Calibration/README.md): 2026-10-07~08 자이로 바이어스와 가속도계 보정 실험, 코드·원본 CSV·검증 결과.

@@ -23,3 +23,4 @@
 ## 실기·코드 실습
 
 - [RPLIDAR A3M1 C++ 데이터 취득](Sensors/RPLIDAR-A3M1/README.md) — 연결, 수신, 최소 거리·각도, CSV 다음 단계
+- [Nano 33 IoT IMU 보정](Sensors/IMU-Calibration/README.md) — Windows CSV 수집, 보정 모델, 실제 검증 결과

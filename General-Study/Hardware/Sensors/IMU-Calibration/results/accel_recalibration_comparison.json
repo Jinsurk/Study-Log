@@ -1,0 +1,42 @@
+{
+  "note": "Reused earlier tilt data; new independent validation required.",
+  "parameters": {
+    "ax_g": {
+      "offset_g": -0.011656056000000026,
+      "raw_scale": 1.002129133,
+      "gain": 0.9978753905760367
+    },
+    "ay_g": {
+      "offset_g": -0.016844752500000004,
+      "raw_scale": 1.0008287455,
+      "gain": 0.9991719407503769
+    },
+    "az_g": {
+      "offset_g": 0.026057619499999962,
+      "raw_scale": 1.0076126045,
+      "gain": 0.9924449094165733
+    }
+  },
+  "results": [
+    {
+      "file": "accel_tilt1_20261007_150807_042.csv",
+      "mean_norm_g": 1.002558725122433,
+      "rmse_from_1g": 0.0026037295641311337
+    },
+    {
+      "file": "accel_tilt2_20261007_151051_386.csv",
+      "mean_norm_g": 0.9972536634821759,
+      "rmse_from_1g": 0.0027794538604625344
+    },
+    {
+      "file": "accel_tilt3_20261007_151251_101.csv",
+      "mean_norm_g": 1.0030576118269456,
+      "rmse_from_1g": 0.0031009423984085295
+    },
+    {
+      "file": "accel_tilt3_20261007_151440_334.csv",
+      "mean_norm_g": 1.0026614313019748,
+      "rmse_from_1g": 0.002727723629673391
+    }
+  ]
+}

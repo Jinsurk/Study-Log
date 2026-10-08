@@ -13,3 +13,4 @@ Notion에서 정리한 학습 내용을 Markdown으로 기록한다. 원리 설�
 ## 실기 실습
 
 - [RPLIDAR A3M1 C++ 데이터 취득](General-Study/Hardware/Sensors/RPLIDAR-A3M1/README.md) — Windows·Jetson 실행 결과와 미완료 작업
+- [Nano 33 IoT IMU 보정](General-Study/Hardware/Sensors/IMU-Calibration/README.md) — 자이로 바이어스, 가속도계 6면·20개 자세 보정과 독립 검증

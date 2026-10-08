@@ -1,0 +1,11 @@
+{
+  "status": "candidate; original calibration unchanged",
+  "positive_file": "accel_pos3_20261007_151830_435.csv",
+  "negative_file": "accel_pos4_20261007_152558_808.csv",
+  "ax_g": {
+    "offset_g": -0.011656056,
+    "raw_scale": 1.002129133,
+    "gain": 0.9978753905760367
+  },
+  "note": "Replacing only X improves all four existing tilt captures, but these reused captures are diagnostic comparison rather than new independent validation. Nonzero cross-axis readings and mounting tilt remain unresolved."
+}
