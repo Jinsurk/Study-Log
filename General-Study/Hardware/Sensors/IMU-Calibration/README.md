@@ -157,7 +157,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\validate_multi
 
 ## 다음 작업
 
-- 보정 행렬을 Nano의 실시간 코드에 적용하고 PC 재계산과 일치하는지 확인.
+- 실시간 보정·Roll/Pitch·상보 필터·아이폰 BLE 수신까지 확인했다. [실시간 자세 추정과 BLE 실습](REALTIME-BLE.md)에 코드, 검증값, 실행 방법과 한계를 정리했다. PC와 실시간 출력의 체계적인 대조는 별도 진행한다.
 - 온도와 전원 재연결에 따른 바이어스 변화를 별도 기록.
 - 동적 자세 추정과 자이로 스케일 보정은 시간 정보·이동 구간을 포함한 별도 실험으로 진행.
 - 카메라·LiDAR와의 공간·시간 외부 보정은 이 실험과 분리해 수행.
