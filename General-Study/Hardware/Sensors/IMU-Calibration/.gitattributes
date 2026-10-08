@@ -1,2 +1,2 @@
 # Preserve original CSV bytes so raw_data_sha256.json is portable.
-data/*.csv -text
+data/*.csv -text whitespace=cr-at-eol
