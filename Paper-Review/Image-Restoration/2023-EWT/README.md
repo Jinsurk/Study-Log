@@ -83,6 +83,12 @@ flowchart LR
 
 위 도식에서 DFEB 1–4와 `+` 사이의 점선이 MFAM 안의 집계 경로이고, 점선 "잔차"가 Fin과 Fe를 건너뛰는 연결이다. 연결 관계는 Fig. 2에서 확인했다. **[그림]**
 
+원문의 그림은 다음과 같다.
+
+![EWT 전체 구조 (원문 Fig. 2)](./images/fig2_ewt_architecture.png)
+
+*그림 출처: Li et al., [arXiv:2304.06274v1](https://arxiv.org/abs/2304.06274), Fig. 2. CC BY 4.0, 원문 PDF에서 해당 그림 영역만 잘라 사용했다.*
+
 **텐서 크기 표.** 입력이 H×W×C이고 D = 180일 때의 크기이며, 괄호 안은 **[예시]**로 256×256 컬러(C = 3)를 넣은 값이다.
 
 | 단계 | 연산 | 출력 크기 | 예시 (256×256×3) | 근거 |
@@ -175,6 +181,12 @@ flowchart LR
   P --> Y["DFEB 출력"]
 ```
 
+원문의 그림은 다음과 같다. 입력이 두 분기로 갈라지는 모습만 그려져 있고 채널을 나누는 표시는 없다.
+
+![DFEB 구조 (원문 Fig. 4)](./images/fig4_dfeb.png)
+
+*그림 출처: Li et al., [arXiv:2304.06274v1](https://arxiv.org/abs/2304.06274), Fig. 4. CC BY 4.0, 원문 PDF에서 해당 그림 영역만 잘라 사용했다.*
+
 **흐름.** 입력 특징 → 두 분기(ConvBlock / Transformer 여러 개) → 채널 concat → Conv 융합 → 입력과의 잔차 덧셈(그림 기준).
 
 **입력을 어떻게 나누는가.** 본문은 특징이 DFEB에 들어오면 "두 그룹으로 나뉘어 한 그룹은 거친 특징을, 다른 그룹은 픽셀 간 관계를 학습한다"고 쓴다(3.C절). 그러나 Fig. 4는 **같은 입력이 두 분기로 갈라져 들어가는 모습만** 그리며, 채널을 쪼개는 연산이나 비율은 어디에도 표시하지 않는다. 논문 본문과 그림 어디에도 분할 축·비율은 명시되어 있지 않다. **[미확인]** **[코드]** 구현에서는 채널을 나누지 않고 **두 분기가 모두 전체 D채널을 입력으로 받는다.** 따라서 "일부 채널만 Transformer에 보낸다"는 식으로 이해하면 안 된다.
@@ -196,6 +208,12 @@ concat 자체는 **파라미터가 없다.** 두 분기의 특징을 어떻게 �
 **속도에 대한 해석.** CNN 분기 덕분에 Transformer 처리량이 줄어든다고 단정할 수는 없다. Table VII에서 CNN+CNN(2.44초, 1,459 MiB), Transformer+Transformer(7.37초, 6,050 MiB), CNN+Transformer(6.21초, 4,934 MiB)를 비교하면 CNN+Transformer가 Transformer 두 분기보다 빠르고 메모리가 적다. 그러나 이는 **두 번째 Transformer를 CNN으로 바꿨을 때의 차이**이고, CNN+Transformer에서도 Transformer 분기는 여전히 입력 전체를 처리한다. 전체 속도에는 Conv, 채널 차원, concat, 메모리 이동 같은 추가 연산이 함께 영향을 준다.
 
 ### ConvBlock 구조와 설계 이유
+
+원문의 그림은 다음과 같다. 왼쪽이 ConvBlock, 오른쪽이 Transformer 블록이다.
+
+![ConvBlock과 Transformer 블록 (원문 Fig. 5)](./images/fig5_convblock_transformer.png)
+
+*그림 출처: Li et al., [arXiv:2304.06274v1](https://arxiv.org/abs/2304.06274), Fig. 5. CC BY 4.0, 원문 PDF에서 해당 그림 영역만 잘라 사용했다.*
 
 Fig. 5(왼쪽)에서 순서를 확인하면 다음과 같다. **[그림]**
 
@@ -429,3 +447,4 @@ CUrban100 실행 시간은 SwinIR 232.46초, Uformer 44.50초, Restormer 215.02�
 - Liang et al., SwinIR: Image Restoration Using Swin Transformer, ICCV 2021.
 - Liu et al., Multi-level Wavelet-CNN for Image Restoration (MWCNN), CVPR Workshops 2018.
 - Liu et al., Swin Transformer: Hierarchical Vision Transformer using Shifted Windows, 2021.
+- 4절의 그림(Fig. 2, 4, 5)은 Li et al., arXiv:2304.06274v1에서 가져왔다. arXiv 논문 페이지에 표시된 라이선스는 CC BY 4.0이며, 저널판(*Neural Networks*, 2024)의 그림 사용 조건은 확인하지 않았다.
